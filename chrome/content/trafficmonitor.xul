@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<overlay id="trafficmonitor" 
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+ <statusbar id="status-bar">
+  <statusbarpanel id="my-panel" label="0" onclick="trafficStatus.viewTrafficPage();"/>
+ </statusbar> 
+ <script type="application/x-javascript" src="persistencyMan.js"/>
+ <script type="application/x-javascript" src="notifier.js"/>
+ <script type="application/x-javascript" src="interface.js"/>
+</overlay>
