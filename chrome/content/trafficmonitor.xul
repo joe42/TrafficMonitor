@@ -1,8 +1,16 @@
 <?xml version="1.0"?>
 <overlay id="trafficmonitor" 
          xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
- <statusbar id="status-bar">
-  <statusbarpanel id="my-panel" label="0" onclick="trafficStatus.viewTrafficPage();"/>
+  <statusbar id="status-bar">
+   <popupset>
+    <menupopup id="trafficmonitormenu">
+      <menuitem label="Preferences..." default="true"
+                oncommand="window.openDialog('chrome://trafficmonitor/content/options.xul','TrafficMonitor Options','centerscreen, chrome');return 0;"/> 
+      <!--<menuitem label="Yahoo! (YHOO)" oncommand="StockWatcher.watchStock('YHOO')"/>-->
+    </menupopup>
+  </popupset>
+
+  <statusbarpanel id="my-panel" label="0" context="trafficmonitormenu" onclick="if (event.button == 0) trafficStatus.viewTrafficPage();"/>
  </statusbar> 
  <script type="application/x-javascript" src="persistencyMan.js"/>
  <script type="application/x-javascript" src="notifier.js"/>

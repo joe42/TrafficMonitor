@@ -1,19 +1,46 @@
 <?xml version="1.0"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
  
-<prefwindow id="stockwatcher2-prefs"
-     title="StockWatcher 2 Options"
+<prefwindow id="TrafficMonitor-prefs"
+     title="TrafficMonitor Options"
      xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
  
-<prefpane id="sw2-stock-pane" label="Stock Settings">
+<prefpane id="trafficmonitor-pane" label="TrafficMonitor Settings">
   <preferences>
-    <preference id="pref_symbol" name="stockwatcher2.symbol" type="string"/>
+    <preference id="pref_trafficViewURL" name="trafficmonitor.trafficViewURL" type="string"/>
+    <preference id="pref_WarnLvl1" name="trafficmonitor.WarnLvl1" type="int"/>
+    <preference id="pref_WarnLvl2" name="trafficmonitor.WarnLvl2" type="int"/>
   </preferences>
- 
-  <hbox align="center">
-    <label control="symbol" value="Stock to watch: "/>
-    <textbox preference="pref_symbol" id="symbol" maxlength="4"/>
-  </hbox>
+  
+  <groupbox>
+  <caption label="Details"/>
+  <grid>
+    <columns>
+      <column flex="1"/>
+      <column flex="2"/>
+    </columns>
+    <rows>
+      <row>
+    <label value="Trafficsite"/>
+        <menulist>
+          <menupopup>
+            <menuitem preference="pref_trafficViewURL" label="www.wh2.tu-dresden.de" value="https://www.wh2.tu-dresden.de/usertraffic" selected="true"/> 
+            <menuitem preference="pref_trafficViewURL" label="anderewebseite" value="https://www.wh2.tu-dresden.de/usertraffic/#2" /> 
+          </menupopup>
+        </menulist>
+      </row>
+      <row> 
+    <label control="WarnLvl1" value="Traffic-Warnlevel 1"/>
+    <textbox preference="pref_WarnLvl1" id="WarnLvl1" maxlength="3" value="80"/>
+      </row>
+      <row> 
+    <label control="WarnLvl2" value="Traffic-Warnlevel 2"/>
+    <textbox preference="pref_WarnLvl2" id="WarnLvl2" maxlength="3" value="90"/>
+      </row>
+    </rows>
+  </grid>
+</groupbox>
+
 </prefpane>
  
 </prefwindow>
