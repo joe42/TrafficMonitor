@@ -16,6 +16,8 @@ var options = {
 			return "www.http://wh25.tu-dresden.de/traffic.php";
 		case "https://wh12.tu-dresden.de/traffic-o-meter.html":
 			return "https://wh12.tu-dresden.de/tom.addon2.php";
+		case "http://wh10.tu-dresden.de/phpskripte/getMyTraffic.php":
+			return "http://wh10.tu-dresden.de/index.php/traffic.html";
 		default:
 			/*throw exception*/
 			return null;

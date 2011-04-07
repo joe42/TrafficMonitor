@@ -16,7 +16,8 @@ var trafficStatus = {
 	               "http://www.wh17.tu-dresden.de/de/fuer-unsere-netznutzer/mein-traffic.html",
 	               "https://www.wh2.tu-dresden.de/usertraffic",
 	               "http://www.wh25.tu-dresden.de/zeuser/agdsnISAPI.php?site=traffic", 
-	               "https://wh12.tu-dresden.de/traffic-o-meter.html" ],
+	               "https://wh12.tu-dresden.de/traffic-o-meter.html",
+	               "http://wh10.tu-dresden.de/phpskripte/getMyTraffic.php", ],
 	/**
 	 * Opens a new tab with the current URL to the site with a user-friendly view of the traffic level.
 	 * 
