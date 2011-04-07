@@ -16,18 +16,7 @@ trafficStatus:>persistencyMgr.setChar("trafficmonitor", "trafficViewURL", url)
 persistencyMgr:
 persistencyMgr:stop 
 [/c]  
-[/c]   
-			var trafficURL = options.trafficViewURL2trafficURL(trafficViewURL);  
-			req.open('GET', trafficURL, false);  
-			req.send(null);
-			if (req.status == 200) { 
-				var traffic = Math.round(parseFloat(req.responseText));
-				if (traffic != -1) { 
-					persistencyMgr.setChar("trafficmonitor", "trafficViewURL", trafficViewURL);
-					return;
-				} 
-			} 
-		}]]></source>
+[/c]]]></source>
 <configuration>
 <property name="actorWidth" value="25"/>
 <property name="allowMessageProperties" value="false"/>

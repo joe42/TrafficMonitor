@@ -1,12 +1,15 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
  
 <prefwindow id="TrafficMonitor-prefs"
      title="TrafficMonitor Options"
      xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
- 
-<prefpane id="trafficmonitor-pane" label="TrafficMonitor Settings">
-  <preferences>
+
+<script type="application/x-javascript" src="persistencyMan.js"/>
+<script type="application/x-javascript" src="options.js"/> 
+<prefpane id="trafficmonitor-pane" onpaneload="options.onLoad()" label="TrafficMonitor Settings">
+
+ <preferences>
     <preference id="pref_trafficViewURL" name="trafficmonitor.trafficViewURL" type="string"/>
     <preference id="pref_WarnLvl1" name="trafficmonitor.WarnLvl1" type="int"/>
     <preference id="pref_WarnLvl2" name="trafficmonitor.WarnLvl2" type="int"/>
@@ -21,21 +24,23 @@
     </columns>
     <rows>
       <row>
-    <label value="Trafficsite"/>
+      <label value="Trafficsite"/>
         <menulist>
-          <menupopup>
-            <menuitem preference="pref_trafficViewURL" label="www.wh2.tu-dresden.de" value="https://www.wh2.tu-dresden.de/usertraffic" selected="true"/> 
-            <menuitem preference="pref_trafficViewURL" label="anderewebseite" value="https://www.wh2.tu-dresden.de/usertraffic/#2" /> 
+          <menupopup id="menuTrafficViewURL">
+            <menuitem preference="pref_trafficViewURL" label="Wundtstraße" value="https://www.wh2.tu-dresden.de/usertraffic" /> 
+            <menuitem preference="pref_trafficViewURL" label="Gerokstraße" value="http://www.wh17.tu-dresden.de/de/fuer-unsere-netznutzer/mein-traffic.html" /> 
+            <menuitem preference="pref_trafficViewURL" label="Zeunerstraße" value="http://www.wh25.tu-dresden.de/zeuser/agdsnISAPI.php?site=traffic" /> 
+            <menuitem preference="pref_trafficViewURL" label="Hochschulstraße" value="https://wh12.tu-dresden.de/traffic-o-meter.html" /> 
           </menupopup>
         </menulist>
       </row>
       <row> 
     <label control="WarnLvl1" value="Traffic-Warnlevel 1"/>
-    <textbox preference="pref_WarnLvl1" id="WarnLvl1" maxlength="3" value="80"/>
+    <textbox preference="pref_WarnLvl1" id="WarnLvl1" maxlength="3"/>
       </row>
       <row> 
     <label control="WarnLvl2" value="Traffic-Warnlevel 2"/>
-    <textbox preference="pref_WarnLvl2" id="WarnLvl2" maxlength="3" value="90"/>
+    <textbox preference="pref_WarnLvl2" id="WarnLvl2" maxlength="3"/>
       </row>
     </rows>
   </grid>
