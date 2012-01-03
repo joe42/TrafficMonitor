@@ -9,7 +9,7 @@ var options = {
 	trafficViewURL2trafficURL : function(trafficViewURL) {
 		switch (trafficViewURL) {
 		case "https://www.wh2.tu-dresden.de/usertraffic":
-			return "http://www.wh2.tu-dresden.de/traffic/getMyTraffic.php";
+			return "https://www.wh2.tu-dresden.de/traffic/getMyTraffic.php";
 		case "http://www.wh17.tu-dresden.de/de/fuer-unsere-netznutzer/mein-traffic.html":
 			return "http://www.wh17.tu-dresden.de/traf/traffic_percent.php";
 		case "http://www.wh25.tu-dresden.de/zeuser/agdsnISAPI.php?site=traffic":

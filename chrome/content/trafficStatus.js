@@ -51,7 +51,7 @@ var trafficStatus = {
 				"trafficURL");
 		this.trafficViewURL = persistencyMgr.getChar("trafficmonitor",
 				"trafficViewURL");
-		if(this.trafficViewURL==""){
+		if(this.trafficViewURL=="" || this.trafficURL=="http://www.wh2.tu-dresden.de/traffic/getMyTraffic.php"){
 			this.findTrafficViewURL();
 		}
 		//get levels the user is warned on if they are exceeded
