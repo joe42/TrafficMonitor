@@ -5,7 +5,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>trafficmonitor@example.net</em:id>
-    <em:version>2.2</em:version>
+    <em:version>2.3</em:version>
     <em:type>2</em:type>
 	<em:updateURL>https://www.wh2.tu-dresden.de/sites/default/files/update.rdf</em:updateURL>
 	<em:optionsURL>chrome://trafficmonitor/content/options.xul</em:optionsURL>
