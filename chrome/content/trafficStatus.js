@@ -47,13 +47,7 @@ var trafficStatus = {
 		//initialize observer for preferences dialog:  
 		persistencyMgr.addObserver("trafficmonitor", this); //monitor changes to the domain "trafficmonitor"
 		//initialize the site for user-friendly traffic level view and site for parsing the traffic level
-		this.trafficURL = persistencyMgr.getChar("trafficmonitor",
-				"trafficURL");
-		this.trafficViewURL = persistencyMgr.getChar("trafficmonitor",
-				"trafficViewURL");
-		if(this.trafficViewURL=="" || this.trafficURL=="http://www.wh2.tu-dresden.de/traffic/getMyTraffic.php"){
-			this.findTrafficViewURL();
-		}
+		this.findTrafficViewURL();
 		//get levels the user is warned on if they are exceeded
 		this.WarnLvl1 = persistencyMgr.getInt("trafficmonitor", "WarnLvl1");
 		this.WarnLvl2 = persistencyMgr.getInt("trafficmonitor", "WarnLvl2");
@@ -83,8 +77,6 @@ var trafficStatus = {
 					"trafficViewURL");
 			this.trafficURL = options
 					.trafficViewURL2trafficURL(this.trafficViewURL); //get corresponding URL to parse traffic level
-			persistencyMgr.setChar("trafficmonitor", "trafficURL",
-					this.trafficURL);//store as default
 			this.getTraffic(); //refresh view
 			break;
 		case "WarnLvl1": //change of warnlevel 1
