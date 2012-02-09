@@ -13,7 +13,7 @@ var trafficStatus = {
 	trafficURL : "",
 	trafficViewURL : "",
 	trafficViewURLs : [ 
-	               "http://www.wh17.tu-dresden.de/de/fuer-unsere-netznutzer/mein-traffic.html",
+	               "http://www.wh17.tu-dresden.de/traffic/uebersicht",
 	               "https://www.wh2.tu-dresden.de/usertraffic",
 	               "http://www.wh25.tu-dresden.de/zeuser/agdsnISAPI.php?site=traffic", 
 	               "https://wh12.tu-dresden.de/traffic-o-meter.html",

@@ -28,7 +28,7 @@
         <menulist>
           <menupopup id="menuTrafficViewURL">
             <menuitem preference="pref_trafficViewURL" label="Wundtstraße" value="https://www.wh2.tu-dresden.de/usertraffic" /> 
-            <menuitem preference="pref_trafficViewURL" label="Gerokstraße" value="http://www.wh17.tu-dresden.de/de/fuer-unsere-netznutzer/mein-traffic.html" /> 
+            <menuitem preference="pref_trafficViewURL" label="Gerokstraße" value="http://www.wh17.tu-dresden.de/traffic/uebersicht" /> 
             <menuitem preference="pref_trafficViewURL" label="Zeunerstraße" value="http://www.wh25.tu-dresden.de/zeuser/agdsnISAPI.php?site=traffic" /> 
             <menuitem preference="pref_trafficViewURL" label="Hochschulstraße" value="https://wh12.tu-dresden.de/traffic-o-meter.html" /> 
             <menuitem preference="pref_trafficViewURL" label="Borsbergstraße" value="http://wh10.tu-dresden.de/index.php/traffic.html" /> 
