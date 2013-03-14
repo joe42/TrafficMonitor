@@ -13,7 +13,7 @@ var options = {
 		case "http://www.wh17.tu-dresden.de/traffic/uebersicht":
 			return "http://www.wh17.tu-dresden.de/traffic/prozent";
 		case "http://www.wh25.tu-dresden.de/zeuser/agdsnISAPI.php?site=traffic":
-			return "www.http://wh25.tu-dresden.de/traffic.php";
+			return "http://wh25.tu-dresden.de/traffic.php";
 		case "https://wh12.tu-dresden.de/traffic-o-meter.html":
 			return "https://wh12.tu-dresden.de/tom.addon2.php";
 		case "http://wh10.tu-dresden.de/index.php/traffic.html":
