@@ -243,7 +243,7 @@ var trafficStatus = {
 			req.send(null);
 			if (req.status == 200) { 
 				var traffic = Math.round(parseFloat(req.responseText));
-				if (traffic != -1) { 
+				if (traffic != -1 && !isNaN(parseFloat(traffic)) && isFinite(traffic)) { 
 					this.trafficViewURL = trafficViewURL;
 					this.trafficURL = trafficURL;
 					persistencyMgr.setChar("trafficmonitor", "trafficViewURL", trafficViewURL);
